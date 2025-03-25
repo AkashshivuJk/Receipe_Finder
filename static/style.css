@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #3c2f2f, #4a3f3f, #553d60, #2d2d54);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Keyframes for moving gradient */
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Main container to hold image and chat box */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: none;
+}
+
+/* Chef image styling */
+.chef-image {
+  width: 300px;
+  height: 400px;
+  background-image: url('chef.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+/* Chat box container */
+.chat-container {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+#chat-box {
+  #chat-box {
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fafafa;
+    background-image: url('plate.png'); /* Add the plate image */
+    background-size: cover; /* Ensure the image covers the entire box */
+    background-position: center; /* Center the image */
+  }
+  
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#send-btn {
+  padding: 10px 20px;
+  background-color: #ab0707; /* Chili red color */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded edges for chili shape */
+  cursor: pointer;
+  transform: skew(-10deg); /* Slight skew for a chili-like effect */
+  position: relative; /* Enables addition of a "stem" */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* Green chili stem */
+#send-btn:before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg); /* Tilt the stem */
+  width: 15px;
+  height: 5px;
+  background-color: #228b22; /* Green for the chili stem */
+  border-radius: 2px;
+}
+
+#send-btn:hover {
+  background-color: #e53935; /* Darker red on hover */
+  transform: scale(1.1) skew(-10deg); /* Slight enlargement for interactivity */
+}
+
+
+.bot-message,
+.user-message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.bot-message {
+  color: #333;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
